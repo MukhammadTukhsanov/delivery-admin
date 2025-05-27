@@ -1,5 +1,6 @@
 {
   "name": "fuse-react-app",
+  "homepage": "https://MukhammadTukhsanov.github.io/delivery-admin",
   "version": "15.0.0",
   "private": true,
   "type": "module",
@@ -29,6 +30,7 @@
     "@react-google-maps/api": "2.20.6",
     "@react-spring/web": "9.7.5",
     "@reduxjs/toolkit": "2.7.0",
+    "@tailwindcss/postcss": "4.1.4",
     "@tiptap/extension-highlight": "2.11.7",
     "@tiptap/extension-image": "2.11.7",
     "@tiptap/extension-link": "2.11.7",
@@ -42,7 +44,6 @@
     "@tiptap/pm": "2.11.7",
     "@tiptap/react": "2.11.7",
     "@tiptap/starter-kit": "2.11.7",
-    "@tailwindcss/postcss": "4.1.4",
     "@vercel/kv": "3.0.0",
     "apexcharts": "4.5.0",
     "autosuggest-highlight": "3.3.4",
@@ -133,6 +134,7 @@
     "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-react-refresh": "0.4.19",
     "eslint-plugin-unused-imports": "4.1.4",
+    "gh-pages": "^6.3.0",
     "prettier": "3.5.3",
     "promise": "8.3.0",
     "tailwindcss": "4.1.4",
@@ -149,7 +151,9 @@
     "build-docs": "npx tsx  \"./src/app/(public)/documentation/material-ui-components/utils/build.ts\"",
     "postinstall": "node src/utils/node-scripts/fuse-react-message.js",
     "poststart": "node src/utils/node-scripts/fuse-react-message.js",
-    "audit": "npm audit --production"
+    "audit": "npm audit --production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "engines": {
     "node": ">=22.12.0",
